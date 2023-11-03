@@ -1,0 +1,5 @@
+-- create table services
+
+CREATE TABLE services(id INT NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    duration_hours INT NOT NULL DEFAULT 1);
