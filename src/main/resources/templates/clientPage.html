@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>CarWash</title>
+  <style>
+   button {
+    background: #008EB0; /* Синий цвет фона */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    margin-bottom: 1rem; /* Отступ снизу */
+   }
+   .green { background: #73A353; }
+
+    </style>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<h1><p style="text-align:center">CarWash</p></h1>
+<h2><p>Добро пожаловать в ClientInterface</p></h2>
+
+
+
+<form action="client/viewAllRecord" method="GET">
+  <div>
+    <button class="green" type="submit">Показать все записи</button>
+  </div>
+</form>
+
+
+<form action="client/addRecord" method="post" enctype="multipart/form-data">
+  <div>
+    <h2><p>Укажите имя клиента</p></h2>
+    <input name="name" id="name" type="text">
+    <h2><p>Выберите дату</p></h2>
+    <input name="dateRecord" id="dateRecord" type="date">
+    <h2><p>Выберите время</p></h2>
+    <input name="timeRecord" id="timeRecord" type="time">
+    <h2><p>Укажите уникальный идентификатор услуги на которую нужно произвести запись</p></h2>
+    <input name="idServices" id="idServices" type="number">
+    <p></p>
+    <button type="submit">Добавить запись</button>
+  </div>
+</form>
+
+
+<form action="client/timeLeft" method="GET">
+  <div>
+    <h2><p>Укажите уникальный идентификатор клиента, чтобы увидеть остаток по времени до приема</p></h2>
+    <input name="id" type="number">
+    <p></p>
+    <button type="submit">Показать</button>
+  </div>
+</form>
+
+
+<p></p>
+<form action="/" method="GET">
+  <div>
+    <button type="submit">Вернуться назад</button>
+  </div>
+</form>
+</body>

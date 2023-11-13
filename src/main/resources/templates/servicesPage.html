@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>ServicesPage</title>
+  <link rel="stylesheet">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<h1><p class="center">Услуги</p></h1>
+
+<table>
+  <tr>
+    <th>Уникальный идентификатор услуги</th>
+    <th>Название услуги</th>
+    <th>Продолжительность услуги</th>
+  </tr>
+  <tr th:each="s: ${services}" >
+    <td th:text="${s.getId()}"></td>
+    <td th:text="${s.getName()}"></td>
+    <td th:text="${s.getDurationTime()}"></td>
+  </tr>
+</table>
+<br>
+<p></p>
+<form action="/admin" method="GET">
+  <div>
+    <button type="submit">Вернуться назад</button>
+  </div>
+</form>
+</body>
+</html>

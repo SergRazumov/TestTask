@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CarWash</title>
+    <style>
+   button {
+    background: #008EB0; /* Синий цвет фона */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    margin-bottom: 1rem; /* Отступ снизу */
+   }
+   .green { background: #73A353; }
+
+    </style>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<h1><p style="text-align:center">CarWash</p></h1>
+<h2><p>Добро пожаловать в AdminInterface</p></h2>
+
+<form action="admin/viewAllService" method="GET">
+    <div>
+        <button class="green" type="submit">Показать все доступные услуги</button>
+    </div>
+</form>
+
+
+
+<form action="admin/addService" method="post" enctype="multipart/form-data">
+    <div>
+        <h2><p>Укажите уникальный идентификатор услуги</p></h2>
+        <input name="identifier" id="identifier" type="number">
+        <h2><p>Укажите название новой услуги</p></h2>
+        <input name="name" id="name" type="text">
+        <h2><p>Укажите продолжительность услуги</p></h2>
+        <input name="time" id="time" type="time">
+        <button type="submit">Добавить услугу</button>
+    </div>
+</form>
+
+
+<form action="admin/removeService" method="post" enctype="multipart/form-data">
+    <div>
+        <h2><p>Укажите уникальный идентификатор услуги который нужно удалить</p></h2>
+        <input name="removeService" type="number">
+        <button type="submit">Удалить услугу</button>
+    </div>
+</form>
+
+
+
+<p></p>
+<form action="/" method="GET">
+    <div>
+        <button type="submit">Вернуться назад</button>
+    </div>
+</form>
+
+</body>

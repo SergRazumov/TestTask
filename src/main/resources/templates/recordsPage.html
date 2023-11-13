@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>RecordsPage</title>
+  <link rel="stylesheet">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<h1><p class="center">Записи по времени</p></h1>
+
+<table>
+  <tr>
+    <th>Уникальный идентификатор</th>
+    <th>Имя клиента</th>
+    <th>Время и число записи</th>
+    <th>Название услуги</th>
+    <th>Окончание работы</th>
+  </tr>
+  <tr th:each="r: ${records}" >
+    <td th:text="${r.getId()}"></td>
+    <td th:text="${r.getName()}"></td>
+    <td th:text="${r.getStartDateTime()}"></td>
+    <td th:text="${r.getNameService()}"></td>
+    <td th:text="${r.getEndDateTime()}"></td>
+  </tr>
+</table>
+<br>
+<p></p>
+<form action="/client" method="GET">
+  <div>
+    <button type="submit">Вернуться назад</button>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CarWash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<h1><p style="text-align:center">CarWash</p></h1>
+<h2><p style="text-align:center">Добро пожаловать в программу автомойки. Выберите интерфейс в зависимости от функционала</p></h2>
+
+<form action="/admin" method="get">
+    <div>
+        <button type="submit">Администраторский интерфейс</button>
+    </div>
+</form>
+
+<p></p>
+
+<form action="/client" method="get">
+    <div>
+        <button type="submit">Клиентский интерфейс</button>
+    </div>
+</form>
+
+
+</body>

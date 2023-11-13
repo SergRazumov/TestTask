@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>TimeLeft</title>
+  <link rel="stylesheet">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<body>
+<h1>
+    Осталось ждать:
+    <p class="center" th:text="${message}"></p>
+</h1>
+
+<form action="/client" method="GET">
+    <div>
+        <button type="submit">Вернуться назад</button>
+    </div>
+</form>
+</body>
+</html>
